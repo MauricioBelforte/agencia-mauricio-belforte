@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web Profesional | Planes 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .plan-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .custom-margin {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        @media (min-width: 1024px) {
+            .custom-margin {
+                padding-left: 10vw;
+                padding-right: 10vw;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-600">DevWeb<span class="text-slate-800">2026</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Inicio</a>
+                    <a href="#planes" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Planes</a>
+                    <a href="#proceso" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Proceso</a>
+                    <a href="#contacto"
+                        class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition font-medium">Consultar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg pt-40 pb-20 px-4 text-center text-white custom-margin">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-6xl font-bold mb-6 leading-tight">Tu presencia digital profesional comienza aquí
+            </h1>
+            <p class="text-base md:text-lg text-gray-300 mb-10 leading-relaxed">Ofrecemos soluciones web escalables,
+                desde landing pages express hasta sistemas autogestionables de alto rendimiento.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#planes"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold transition shadow-lg text-center">Ver
+                    Planes y Precios</a>
+                <a href="#contacto"
+                    class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-lg font-bold transition text-center">Contactame</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes Section -->
+    <section id="planes" class="py-16 md:py-24 bg-gray-50 custom-margin">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 italic">Nuestros Planes</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto text-base md:text-lg mb-4">Elegí el nivel de inversión que mejor
+                se adapte a la etapa de tu negocio.</p>
+            <div class="inline-block">
+                <p
+                    class="text-blue-600 font-semibold bg-blue-50 py-2 px-6 rounded-full text-xs md:text-sm border border-blue-100 italic">
+                    <i class="fas fa-info-circle mr-2"></i> Todos los planes requieren mantenimiento mensual
+                    obligatorio.
+                </p>
+            </div>
+        </div>
+
+        <!-- Grid de Planes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+
+            <!-- Plan 1 -->
+            <div class="plan-card bg-white p-6 md:p-8 rounded-2xl border border-gray-100 flex flex-col">
+                <div class="mb-6">
+                    <span
+                        class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold uppercase">Express</span>
+                    <h3 class="text-xl md:text-2xl font-bold mt-4">Presencia Inicial</h3>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-3xl md:text-4xl font-bold text-gray-900">$100.000</span>
+                    </div>
+                    <p class="text-xs text-blue-600 font-bold mt-2 italic">+ $10.000/mes mant. técnico</p>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow text-sm">
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span>Plantilla optimizada
+                            (Diseño A o B)</span></li>
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span>Integración
+                            WhatsApp/Redes</span></li>
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span>Demo enfocada en tu
+                            rubro</span></li>
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span>Ajustes por única
+                            vez</span></li>
+                    <li class="flex items-start text-gray-400 italic line-through"><i
+                            class="fas fa-times mt-1 mr-3 shrink-0"></i><span>No apareces arriba en Google (SEO)</span>
+                    </li>
+                    <li class="flex items-start text-gray-400 italic line-through"><i
+                            class="fas fa-times mt-1 mr-3 shrink-0"></i><span>No incluye dominio .com propio</span></li>
+                </ul>
+                <button onclick="contactar('Presencia Inicial')"
+                    class="w-full py-3 px-6 rounded-lg border-2 border-blue-600 text-blue-600 font-bold hover:bg-blue-50 transition">Seleccionar</button>
+            </div>
+
+            <!-- Plan 2 -->
+            <div
+                class="plan-card bg-white p-6 md:p-8 rounded-2xl border-2 border-blue-600 relative flex flex-col shadow-xl">
+                <div
+                    class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap">
+                    RECOMENDADO</div>
+                <div class="mb-6">
+                    <span
+                        class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold uppercase">Profesional</span>
+                    <h3 class="text-xl md:text-2xl font-bold mt-4">Marca & SEO</h3>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-3xl md:text-4xl font-bold text-gray-900">$200.000</span>
+                    </div>
+                    <p class="text-xs text-blue-600 font-bold mt-2 italic">+ $20.000/mes mant. activo</p>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow text-sm">
+                    <li class="flex items-start text-blue-600 font-bold"><i
+                            class="fas fa-plus-circle mt-1 mr-3 shrink-0"></i><span>Incluye todo lo del Plan
+                            Express</span></li>
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span><strong>Dominio
+                                Propio</strong> (.com/.ar)</span></li>
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span><strong>Optimización
+                                SEO</strong> avanzada</span></li>
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span>Correo corporativo
+                            profesional</span></li>
+                    <li class="flex items-start text-gray-400 italic line-through"><i
+                            class="fas fa-times mt-1 mr-3 shrink-0"></i><span>Panel Autogestionable de contenido</span>
+                    </li>
+                </ul>
+                <button onclick="contactar('Marca & SEO')"
+                    class="w-full py-3 px-6 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700 transition">Seleccionar
+                    Plan</button>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="plan-card bg-white p-6 md:p-8 rounded-2xl border border-gray-100 flex flex-col">
+                <div class="mb-6">
+                    <span
+                        class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold uppercase">Business</span>
+                    <h3 class="text-xl md:text-2xl font-bold mt-4">Personalizado</h3>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-3xl md:text-4xl font-bold text-gray-900">$300.000</span>
+                    </div>
+                    <p class="text-xs text-blue-600 font-bold mt-2 italic">+ $30.000/mes mant. evolutivo</p>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow text-sm">
+                    <li class="flex items-start text-blue-600 font-bold"><i
+                            class="fas fa-plus-circle mt-1 mr-3 shrink-0"></i><span>Incluye todo lo del Plan
+                            Profesional</span></li>
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span>Cambios estructurales de
+                            diseño</span></li>
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span>Navegación dinámica
+                            ilimitada</span></li>
+                    <li class="flex items-start text-gray-600"><i
+                            class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span>Agregado de secciones
+                            nuevas</span></li>
+                    <li class="flex items-start text-gray-400 italic line-through"><i
+                            class="fas fa-times mt-1 mr-3 shrink-0"></i><span>Diseño de Logo Original</span></li>
+                </ul>
+                <button onclick="contactar('Personalizado')"
+                    class="w-full py-3 px-6 rounded-lg border-2 border-blue-600 text-blue-600 font-bold hover:bg-blue-50 transition">Seleccionar</button>
+            </div>
+
+            <!-- Plan 4 -->
+            <div class="plan-card bg-slate-900 p-6 md:p-8 rounded-2xl text-white flex flex-col">
+                <div class="mb-6">
+                    <span
+                        class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase">Premium</span>
+                    <h3 class="text-xl md:text-2xl font-bold mt-4">Identidad de Marca</h3>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-3xl md:text-4xl font-bold">$400.000</span>
+                    </div>
+                    <p class="text-xs text-blue-400 font-bold mt-2 italic">+ $40.000/mes mant. estético</p>
+                </div>
+                <ul class="space-y-4 mb-8 flex-grow text-sm text-gray-300">
+                    <li class="flex items-start text-blue-400 font-bold"><i
+                            class="fas fa-plus-circle mt-1 mr-3 shrink-0"></i><span>Incluye todo lo del Plan
+                            Business</span></li>
+                    <li class="flex items-start"><i
+                            class="fas fa-check text-blue-400 mt-1 mr-3 shrink-0"></i><span>Diseño de Logo
+                            Original</span></li>
+                    <li class="flex items-start"><i
+                            class="fas fa-check text-blue-400 mt-1 mr-3 shrink-0"></i><span>Selección de imágenes
+                            HD</span></li>
+                    <li class="flex items-start"><i
+                            class="fas fa-check text-blue-400 mt-1 mr-3 shrink-0"></i><span>Fuentes y paleta de
+                            colores</span></li>
+                </ul>
+                <button onclick="contactar('Identidad de Marca')"
+                    class="w-full py-3 px-6 rounded-lg bg-blue-500 text-white font-bold hover:bg-blue-600 transition">Cotizar
+                    Ahora</button>
+            </div>
+
+            <!-- Plan 5 (Enterprise) - Adaptable a 1 o 2 columnas -->
+            <div
+                class="plan-card bg-white p-6 md:p-8 rounded-2xl border border-gray-100 md:col-span-2 lg:col-span-2 flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center">
+                <div class="md:w-1/2">
+                    <span
+                        class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-semibold uppercase">Enterprise</span>
+                    <h3 class="text-2xl md:text-3xl font-bold mt-4">Plan Autogestionable</h3>
+                    <p class="text-gray-600 mt-4 leading-relaxed text-sm">Ideal para empresas que necesitan actualizar
+                        precios, stock o contenidos diariamente sin depender de terceros.</p>
+                    <div class="mt-6 flex flex-wrap items-baseline">
+                        <span class="text-2xl md:text-3xl font-bold text-gray-900">$1.000.000</span>
+                        <span class="text-[10px] md:text-xs text-blue-600 font-bold ml-2 italic">+ $100k/mes
+                            Mantenimiento Gold</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 w-full border-t md:border-t-0 md:border-l border-gray-100 pt-6 md:pt-0 md:pl-8">
+                    <ul class="space-y-3 mb-6 text-gray-600 text-sm">
+                        <li class="flex items-start text-blue-600 font-bold mb-4"><i
+                                class="fas fa-star mt-1 mr-3 shrink-0"></i><span>Incluye beneficios de planes
+                                anteriores</span></li>
+                        <li class="flex items-start"><i
+                                class="fas fa-database text-blue-600 mt-1 mr-3 shrink-0"></i><span>Conexión a Base de
+                                Datos segura</span></li>
+                        <li class="flex items-start"><i
+                                class="fas fa-user-cog text-blue-600 mt-1 mr-3 shrink-0"></i><span>Panel Administrativo
+                                privado</span></li>
+                        <li class="flex items-start"><i
+                                class="fas fa-bolt text-blue-600 mt-1 mr-3 shrink-0"></i><span>Gestión de Stock/Precios
+                                online</span></li>
+                        <li class="flex items-start"><i
+                                class="fas fa-check text-green-500 mt-1 mr-3 shrink-0"></i><span>Capacitación de uso
+                                incluida</span></li>
+                    </ul>
+                    <button onclick="contactar('Plan Autogestionable')"
+                        class="w-full py-4 px-6 rounded-lg bg-slate-800 text-white font-bold hover:bg-slate-900 transition shadow-lg">Contratar
+                        Enterprise</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="proceso" class="py-16 md:py-24 bg-white custom-margin">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 italic text-gray-800">Preguntas Frecuentes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
+
+            <!-- Pregunta General 1 -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h4 class="font-bold text-lg mb-2 text-blue-600">¿Qué es el mantenimiento 50/50?</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Es nuestro método de pago: abonás el 50% al inicio para congelar el precio y comenzar el diseño, y el 50% restante al entregarte la web funcionando.</p>
+            </div>
+
+            <!-- Pregunta Mantenimiento Plan 1 -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h4 class="font-bold text-lg mb-2">Mantenimiento "Técnico" (Plan 1)</h4>
+                <p class="text-gray-600 text-sm leading-relaxed mb-3">Asegura que la web no se caiga, protección contra spam y actualizaciones de seguridad del servidor. No incluye cambios de fotos o textos.</p>
+                <span class="text-blue-700 font-bold bg-blue-50 px-3 py-1 rounded-full text-xs border border-blue-100">$10.000 / mes</span>
+            </div>
+
+            <!-- Pregunta Mantenimiento Plan 2 -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h4 class="font-bold text-lg mb-2">Mantenimiento "Activo" (Plan 2)</h4>
+                <p class="text-gray-600 text-sm leading-relaxed mb-3">Incluye todo lo técnico más 1 (una) tanda de cambios de contenido mensual (podes enviarnos nuevas fotos o actualizar un texto de servicios).</p>
+                <span class="text-blue-700 font-bold bg-blue-50 px-3 py-1 rounded-full text-xs border border-blue-100">$20.000 / mes</span>
+            </div>
+
+            <!-- Pregunta Mantenimiento Plan 3 -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h4 class="font-bold text-lg mb-2">Mantenimiento "Evolutivo" (Plan 3)</h4>
+                <p class="text-gray-600 text-sm leading-relaxed mb-3">Pensado para negocios que crecen. Podés pedirnos agregar nuevos botones o secciones pequeñas cada mes para que la web evolucione con tu empresa.</p>
+                <span class="text-blue-700 font-bold bg-blue-50 px-3 py-1 rounded-full text-xs border border-blue-100">$30.000 / mes</span>
+            </div>
+
+            <!-- Pregunta Mantenimiento Plan 4 -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h4 class="font-bold text-lg mb-2">Mantenimiento "Estético" (Plan 4)</h4>
+                <p class="text-gray-600 text-sm leading-relaxed mb-3">Enfocado en la imagen de marca. Incluye rediseños parciales de banners, retoque de colores de temporada y actualización constante de la estética visual.</p>
+                <span class="text-blue-700 font-bold bg-blue-50 px-3 py-1 rounded-full text-xs border border-blue-100">$40.000 / mes</span>
+            </div>
+
+            <!-- Pregunta Mantenimiento Plan 5 -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h4 class="font-bold text-lg mb-2">Mantenimiento "Gold" (Plan 5)</h4>
+                <p class="text-gray-600 text-sm leading-relaxed mb-3">Soporte prioritario 24/7 para el panel de administración, backups diarios de base de datos y optimización de velocidad de carga del servidor dedicada.</p>
+                <span class="text-blue-700 font-bold bg-blue-50 px-3 py-1 rounded-full text-xs border border-blue-100">$100.000 / mes</span>
+            </div>
+
+            <!-- Pregunta General Adicional -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 md:col-span-2 text-center">
+                <h4 class="font-bold text-lg mb-2 text-slate-800">¿Qué pasa si quiero dejar de pagar el mantenimiento?</h4>
+                <p class="text-gray-600 text-sm leading-relaxed max-w-2xl mx-auto">El mantenimiento es necesario para cubrir el costo del servidor y la seguridad. Si se suspende, el sitio quedará fuera de línea. Podés cambiar de plan de mantenimiento en cualquier momento según tus necesidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="gradient-bg text-white py-16 md:py-24 text-center custom-margin">
+        <div class="max-w-2xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 italic">¿Listo para empezar tu proyecto?</h2>
+            <p class="text-gray-400 mb-10 text-sm md:text-base">Potencia tu marca hoy mismo con una web optimizada y
+                profesional.</p>
+            <a href="#" id="ws-btn"
+                class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 md:px-10 md:py-5 rounded-full font-bold text-base md:text-lg transition flex items-center justify-center gap-3 w-fit mx-auto shadow-xl">
+                <i class="fab fa-whatsapp text-2xl"></i> Hablar por WhatsApp
+            </a>
+            <div class="mt-20 pt-8 border-t border-white/10 text-gray-500 text-xs md:text-sm">
+                &copy; 2026 DevWeb Solutions. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function contactar(plan) {
+            const mensaje = encodeURIComponent(`Hola! Me interesa el ${plan}. Me gustaría recibir más información.`);
+            const numero = "5491122334455";
+            window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+        }
+
+        document.getElementById('ws-btn').addEventListener('click', (e) => { e.preventDefault(); contactar('servicio de Desarrollo Web'); });
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.plan-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>

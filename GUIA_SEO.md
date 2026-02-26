@@ -2,6 +2,8 @@
 
 Esta guía está pensada para que tengas siempre a mano los conceptos clave del SEO técnico. Aquí aprenderás de forma sencilla cómo configurar tu web para que Google y las redes sociales la entiendan perfectamente.
 
+> **Nota de contexto:** esta versión está adaptada para la agencia de Mauricio Belforte (`https://mauricio-belforte.web.app/`). Las recomendaciones incorporan SEO local enfocado en **Trelew** y están orientadas a posicionar tu servicio de desarrollo web y diseño en esa ciudad. Las *cards* de precios y las preguntas frecuentes (FAQ) son contenidos visibles del sitio; no modifiques su texto o diseño sin consultarme primero.
+
 ---
 
 ## 1. HTML Semántico: La Base de Todo
@@ -87,15 +89,15 @@ Estas etiquetas van en el `<head>` y son la primera impresión que Google y los 
 
 ```html
 <!-- Título que aparece en la pestaña y en los resultados de Google. ¡El más importante! -->
-<title>Mauricio Belforte | Desarrollador Web Full-Stack</title>
+<title>Mauricio Belforte | Desarrollador Web en Trelew</title>
 
 <!-- Descripción (máx. 160 caracteres) que se muestra en Google. Convence al usuario de hacer clic. -->
 <meta name="description"
-    content="Portfolio de Mauricio Belforte, desarrollador web Full-Stack. Explora mis proyectos con Node.js, JavaScript, IA y más.">
+    content="Agencia de desarrollo web en Trelew. Mauricio Belforte crea sitios, landing pages y sistemas a medida." >
 
 <!-- Palabras clave relevantes para tu contenido. -->
 <meta name="keywords"
-    content="portfolio, desarrollador web, full-stack, frontend, backend, node.js, ia, javascript, Mauricio Belforte">
+    content="desarrollador web trelew, agencia web trelew, mauricio belforte, páginas web">
 
 <!-- Autor de la página. -->
 <meta name="author" content="Mauricio Belforte">
@@ -187,15 +189,15 @@ Al ser una web de una sola página (Single Page), el archivo es sencillo pero fu
 **Función:** Evita penalizaciones por **contenido duplicado**.
 
 Para Google, estas son páginas distintas:
-1. `estudiolaunes.com.ar`
-2. `www.estudiolaunes.com.ar`
-3. `www.estudiolaunes.com.ar/index.html`
+1. `mauricio-belforte.web.app`
+2. `www.mauricio-belforte.web.app`
+3. `www.mauricio-belforte.web.app/index.html`
 
 Si Google ve tres páginas idénticas, divide la reputación entre las tres. La etiqueta `canonical` le dice cuál es la versión oficial.
 
 **Ejemplo:**
 ```html
-<link rel="canonical" href="https://estudiolaunes.com.ar/">
+<link rel="canonical" href="https://mauricio-belforte.web.app/">
 ```
 **Traducción:** "Google, no importa por cuál de las variantes hayas entrado, la URL que debes posicionar y a la que debes sumar la reputación es esta".
 
@@ -211,9 +213,9 @@ Cuando compartes un link en WhatsApp, Facebook o LinkedIn, estas plataformas bus
 **Ejemplo:**
 ```html
 <meta property="og:type" content="website">
-<meta property="og:title" content="Estudio Jurídico | Launes & Asociados">
-<meta property="og:description" content="Asesoramiento legal integral...">
-<meta property="og:image" content="https://www.estudiolaunes.com.ar/imagenes/logoyletras.png">
+<meta property="og:title" content="Mauricio Belforte - Desarrollo Web en Trelew">
+<meta property="og:description" content="Soluciones web profesionales en Trelew: landing pages, tiendas online y sistemas a medida.">
+<meta property="og:image" content="https://mauricio-belforte.web.app/imagenes/og.png">
 ```
 *   **og:title:** El título en negrita de la tarjeta.
 *   **og:description:** El texto descriptivo debajo.
@@ -228,9 +230,9 @@ Aunque Twitter puede leer las etiquetas Open Graph, tiene sus propias etiquetas 
 **Ejemplo:**
 ```html
 <meta property="twitter:card" content="summary_large_image"> <!-- Tarjeta con imagen grande -->
-<meta property="twitter:title" content="Estudio Jurídico | Launes & Asociados">
-<meta property="twitter:description" content="Asesoramiento legal integral...">
-<meta property="twitter:image" content="https://www.estudiolaunes.com.ar/imagenes/logoyletras.png">
+<meta property="twitter:title" content="Mauricio Belforte - Desarrollo Web en Trelew">
+<meta property="twitter:description" content="Soluciones web profesionales en Trelew: landing pages, tiendas online y sistemas a medida.">
+<meta property="twitter:image" content="https://mauricio-belforte.web.app/imagenes/og.png">
 ```
 
 ---
@@ -244,7 +246,7 @@ Google no puede "ver" las imágenes como un humano, por lo que necesita el texto
 
 **Ejemplo:**
 ```html
-<a href="https://www.instagram.com/estudiolaunes" target="_blank"><img src="imagenes/instagram.png" alt="Instagram"></a>
+<a href="https://www.instagram.com/mauricio.belforte" target="_blank"><img src="imagenes/instagram.png" alt="Instagram"></a>
 ```
 
 ---
@@ -260,12 +262,12 @@ Google no puede "ver" las imágenes como un humano, por lo que necesita el texto
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Estudio Jurídico Launes & Asociados",
-  "image": "https://estudiolaunes.com.ar/imagenes/logoyletras.png",
-  "url": "https://estudiolaunes.com.ar/",
-  "telephone": "+54 9 11 2450-2746",
-  "description": "Asesoramiento legal integral a empresas y particulares en Argentina y Uruguay."
+  "@type": "ProfessionalService",
+  "name": "Mauricio Belforte Soluciones Web",
+  "image": "https://mauricio-belforte.web.app/imagenes/logo.png",
+  "url": "https://mauricio-belforte.web.app/",
+  "telephone": "+54 9 221 303-0341",
+  "description": "Desarrollo de sitios y sistemas web profesionales en Trelew."
 }
 </script>
 ```
@@ -289,40 +291,32 @@ ACA VAMOS A DETALLAR ESTA PARTE EN LA GUÍA DE DATOS ESTRUCTURADOS, PORQUE ES UN
 
   ```json
   [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Estudio Jurídico Launes & Asociados",
-      "url": "https://estudiolaunes.com.ar/",
-      "alternateName": ["Estudio Launes", "Launes y Asociados"]
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mauricio Belforte Soluciones Web",
+    "url": "https://mauricio-belforte.web.app/",
+    "alternateName": ["Agencia Web Trelew", "Desarrollador Web Trelew"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Mauricio Belforte Soluciones Web",
+    "image": "https://mauricio-belforte.web.app/imagenes/logo.png",
+    "url": "https://mauricio-belforte.web.app/",
+    "telephone": "+54 9 221 303-0341",
+    "email": "contacto@mauricio-belforte.web.app",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. del Trabajo 123",
+      "addressLocality": "Trelew",
+      "addressRegion": "Chubut",
+      "addressCountry": "AR"
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "LegalService",
-      "name": "Estudio Jurídico Launes & Asociados",
-      "image": "https://estudiolaunes.com.ar/imagenes/logoyletras.png",
-      "url": "https://estudiolaunes.com.ar/",
-      "telephone": "+54 9 11 2450-2746",
-      "email": "fabricio@estudiolaunes.com.ar",
-      "address": [
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "Amapolas 475, of 113",
-          "addressLocality": "Pilar",
-          "addressRegion": "Buenos Aires",
-          "addressCountry": "AR"
-        },
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "Plaza Independencia 822 Piso 13",
-          "addressLocality": "Montevideo",
-          "addressCountry": "UY"
-        }
-      ],
-      "description": "Asesoramiento legal integral a empresas y particulares en Argentina y Uruguay.",
-      "priceRange": "$$" 
-    }
-  ]
+    "description": "Desarrollo de sitios y sistemas web profesionales en Trelew.",
+    "priceRange": "$$"
+  }
+]
   ```
 
   ---
@@ -360,7 +354,7 @@ ACA VAMOS A DETALLAR ESTA PARTE EN LA GUÍA DE DATOS ESTRUCTURADOS, PORQUE ES UN
   Siempre que hagas cambios en este bloque, debes verificar que Google lo entienda sin errores.
 
   1.  Ve a la herramienta oficial: **Prueba de Resultados Enriquecidos de Google**.
-  2.  Pega tu URL (`https://estudiolaunes.com.ar/`) o copia y pega el fragmento de código `<script>`.
+3.  Pega tu URL (`https://mauricio-belforte.web.app/`) o copia y pega el fragmento de código `<script>`. 
   3.  Deberías ver detectados dos elementos válidos: **Sitio web** y **Empresa local**.
 
 
@@ -446,14 +440,14 @@ Google utiliza la URL como parte de su análisis. Si la URL contiene palabras cl
 
 **Mal (confuso):**
 ```
-https://estudiolaunes.com.ar/pagina.php?id=123&cat=servicios
-https://estudiolaunes.com.ar/index.php?p=derecho-civil
+https://mauricio-belforte.web.app/pagina.php?id=123&cat=servicios
+https://mauricio-belforte.web.app/index.php?p=landing
 ```
 
 **Bien (descriptivo y limpio):**
 ```
-https://estudiolaunes.com.ar/servicios/derecho-civil/
-https://estudiolaunes.com.ar/blog/como-redactar-un-testamento/
+https://mauricio-belforte.web.app/planes/desarrollo-web/
+https://mauricio-belforte.web.app/blog/como-elegir-un-diseñador-web-en-trelew/
 ```
 
 **Reglas de oro:**
@@ -475,8 +469,8 @@ De nada sirve tener un contenido perfecto si nadie lo busca. Google necesita ent
 
 **¿Cómo hacerlo?**
 
-1. **Identifica tu palabra clave principal:** La más importante para la página (ej: "abogado de derecho laboral en Buenos Aires")
-2. **Agrupa palabras relacionadas (LSI keywords):** Variaciones naturales (ej: "abogado laboral", "asesor derecho del trabajo")
+1. **Identifica tu palabra clave principal:** La más importante para la página (ej: "abogado de derecho laboral en Buenos Aires" o, en nuestro caso, "desarrollador web Trelew"). Usa siempre una variante que incluya la ciudad si tu negocio es local.
+2. **Agrupa palabras relacionadas (LSI keywords):** Variaciones naturales (ej: "abogado laboral", "asesor derecho del trabajo", "programador web Trelew", "agencia web Trelew")
 3. **Densidad natural:** No repitas obsesivamente. Usa entre 1-2% del total de palabras. Si tu artículo tiene 1000 palabras, menciona la palabra clave 10-20 veces de forma natural.
 4. **Ubicación estratégica:**
    - `<h1>` (título principal)
@@ -489,11 +483,11 @@ De nada sirve tener un contenido perfecto si nadie lo busca. Google necesita ent
 Si tu palabra clave es "asesoría legal empresarial", úsala así:
 
 ```html
-<title>Asesoría Legal Empresarial | Launes & Asociados</title>
-<meta name="description" content="Asesoría legal empresarial integral para PYMES y grandes empresas en Argentina">
-<h1>Asesoría Legal Empresarial para tu Empresa</h1>
-<h2>¿Qué incluye nuestro servicio de asesoría legal?</h2>
-<p>Nuestro equipo de abogados especializados en asesoría legal empresarial...</p>
+<title>Desarrollador Web Trelew | Mauricio Belforte</title>
+<meta name="description" content="Desarrollo web profesional en Trelew: landing pages, tiendas online y sistemas a medida.">
+<h1>Desarrollador Web en Trelew</h1>
+<h2>Servicios de desarrollo y diseño web a medida</h2>
+<p>Ofrezco sitios responsivos, tiendas online y paneles autogestionables, optimizados para tu negocio local en Trelew.</p>
 ```
 
 **Herramientas útiles:** Google Keyword Planner (gratis), Ubersuggest, SEMrush, Ahrefs.
@@ -660,17 +654,17 @@ Muestran la ruta de navegación del usuario. Útil para sitios con estructura pr
     "@type": "ListItem",
     "position": 1,
     "name": "Home",
-    "item": "https://estudiolaunes.com.ar"
+    "item": "https://mauricio-belforte.web.app"
   },{
     "@type": "ListItem",
     "position": 2,
-    "name": "Servicios",
-    "item": "https://estudiolaunes.com.ar/servicios"
+    "name": "Planes",
+    "item": "https://mauricio-belforte.web.app/planes"
   },{
     "@type": "ListItem",
     "position": 3,
-    "name": "Derecho Civil",
-    "item": "https://estudiolaunes.com.ar/servicios/derecho-civil"
+    "name": "Desarrollo Web",
+    "item": "https://mauricio-belforte.web.app/planes/desarrollo-web"
   }]
 }
 </script>

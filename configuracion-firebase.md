@@ -40,7 +40,7 @@ firebase init hosting
 
 
 3. **¿What do you want to use as your public directory?**
-* Si es HTML puro: `public` (Presiona Enter).
+* Si es HTML puro: `public` (Presiona un punto .).
 * Si es React/Vite: `dist` (Escribe `dist` y Enter).
 
 
@@ -76,8 +76,8 @@ Tras decir que sí a GitHub, se abrirá el navegador para autorizar. Luego vuelv
 4. **¿What is the name of the GitHub branch... (main)?**
 * Respuesta: Presiona **Enter** para aceptar `main`.
 
-
-
+5. **File ./index.html already exists. Overwrite?**
+* Respuesta: `n` (No) para no perder tu contenido. Si pones `y` (Yes), se reemplazará con un template vacío.
 ---
 
 ## 4. El "Vuelo Inicial" (Subir los archivos)

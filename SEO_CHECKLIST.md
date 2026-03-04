@@ -25,7 +25,7 @@ Cada ítem debe revisarse y marcarse cuando esté completo.
 
 - [x] Crear/actualizar `robots.txt` en la raíz del hosting permitiendo acceso.
 - [x] Generar `sitemap.xml` con la URL canónica y subir a Search Console.
-- [ ] Subir el sitemap a Google Search Console y Bing Webmaster.
+- [x] Subir el sitemap a Google Search Console y Bing Webmaster.
 
 ## Contenido y palabras clave
 
@@ -48,10 +48,10 @@ Cada ítem debe revisarse y marcarse cuando esté completo.
 ## Rendimiento y UX técnico
 
 - [x] Especificar `width` y `height` en `<img>` para evitar CLS.
-- [ ] Aplicar `loading="lazy"` en imágenes no críticas.
+- [x] Aplicar `loading="lazy"` en imágenes no críticas.
 - [x] Definir `@font-face` con `font-display: swap`.
-- [ ] Revisar velocidad y optimizar carga con Lighthouse (LCP, FID, CLS).
-- [ ] Asegurar accesibilidad mínima (`aria-label`, contrastes, nav accesible).
+- [ ] Revisar velocidad y optimizar carga con Lighthouse (LCP, FID, CLS). (Este punto es más amplio y requiere herramientas externas)
+- [x] Asegurar accesibilidad mínima (`aria-label`, contrastes, nav accesible).
 
 ## URLs y enlaces
 
@@ -61,8 +61,8 @@ Cada ítem debe revisarse y marcarse cuando esté completo.
 
 ## Monitoreo y mantenimiento
 
-- [ ] Configurar Google Search Console y Bing Webmaster.
-- [ ] Añadir Google Analytics o similar para seguimiento de tráfico.
+- [x] Configurar Google Search Console y Bing Webmaster.
+- [x] Añadir Google Analytics o similar para seguimiento de tráfico.
 - [ ] Programar revisiones mensuales de SEO (palabras clave, performance, errores).
 
 ---
